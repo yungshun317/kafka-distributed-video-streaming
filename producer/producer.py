@@ -20,8 +20,6 @@ def publish_video(video_file):
         ret, buffer = cv2.imencode(".jpg", frame)
 
         producer.send(topic, buffer.tobytes())
- 
-        time.sleep(0.2)
 
     video.release()
     print("Publish complete!")
